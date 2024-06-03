@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>JG - Graduação</title>
+    <style>
+        .card-border{
+            --bs-card-spacer-y: 1rem;
+            --bs-card-spacer-x: 1rem;
+            --bs-card-title-spacer-y: 0.5rem;
+            --bs-card-title-color: ;
+            --bs-card-subtitle-color: ;
+            border-radius: 15px; 
+            --bs-card-box-shadow: ;
+            --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+            --bs-card-cap-padding-y: 0.5rem;
+            --bs-card-cap-padding-x: 1rem;
+            --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+            --bs-card-cap-color: ;
+            --bs-card-height: ;
+            --bs-card-color: ;
+            --bs-card-bg: var(--bs-body-bg);
+            --bs-card-img-overlay-padding: 1rem;
+            --bs-card-group-margin: 0.75rem;
+            word-wrap: break-word;
+        }
+        .pontacinza{
+            background: rgb(249,249,249);
+            background: linear-gradient(90deg, rgba(162,162,162,1) 0%, rgba(249,249,249,1) 100%);
+        }
+        .pontaazul{
+            background: rgb(162,162,162);
+            background: linear-gradient(90deg, rgba(162,162,162,1) 0%, rgba(52,221,255,1) 100%);
+        }
+        .pontamarela{
+            background: rgb(52,221,255);
+            background: linear-gradient(90deg, rgba(52,221,255,1) 0%, rgba(255,207,16,1) 100%);
+        }
+        .pontalaranja{
+            background: rgb(255,207,16);
+            background: linear-gradient(90deg, rgba(255,207,16,1) 0%, rgba(255,143,0,1) 100%);
+        }
+        .coral{
+            background: rgb(255,38,38);
+            background: linear-gradient(90deg, rgba(255,38,38,1) 0%, rgba(255,255,255,1) 25%, rgba(255,38,38,1) 50%, rgba(255,255,255,1) 75%, rgba(255,38,38,1) 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="offset-md-2 offset-1 col-md-8 col-10">
+        <div class="row">
+            <div class="col-md-12 col-12 text-center mt-2">
+                <p class="t-japones" style="font-size: 30px;">Graduação</p>
+                <p class="font-padrao" style="font-size: 15px; ">Conhecimentos que você precisa para a graduação de cada faixa</p>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4 col-12">
+                <div class="card-border shadow">
+                    <a data-bs-toggle="modal" data-bs-target="#fxbranca"> <img src="FaixaBranca.png" width="75%" class="mt-2"> <p class="t-japones" style="font-size: 20px;">Faixa Branca</p> </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="card-border shadow">
+                    <a data-bs-toggle="modal" data-bs-target="#fxpontacinza"> <img src="PontaCinza.png" width="75%" class="mt-2"> <p class="t-japones" style="font-size: 20px;">Faixa Ponta Cinza</p> </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="card-border shadow">
+                    <a data-bs-toggle="modal" data-bs-target="#fxcinza"> <img src="FaixaCinza.png" width="75%" class="mt-2"> <p class="t-japones" style="font-size: 20px;">Faixa Cinza</p> </a>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center mt-3">
+            <div class="col-md-4 col-12">
+                <div class="card-border shadow">
+                    <a data-bs-toggle="modal" data-bs-target="#fxpontaazul"> <img src="PontaAzul.png" width="75%" class="mt-2"> <p class="t-japones" style="font-size: 20px;">Faixa Ponta Azul</p>  </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="card-border shadow">
+                    <a data-bs-toggle="modal" data-bs-target="#fxazul"> <img src="FaixaAzul.png" width="75%" class="mt-2"> <p class="t-japones" style="font-size: 20px;">Faixa Azul</p> </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="card-border shadow">
+                    <a data-bs-toggle="modal" data-bs-target="#fxpontaamarela"> <img src="PontaAmarela.png" width="75%" class="mt-2"> <p class="t-japones" style="font-size: 20px;">Faixa Pomta Amarela</p> </a>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center mt-3">
+            <div class="col-md-4 col-12">
+                <div class="card-border shadow">
+                    <a data-bs-toggle="modal" data-bs-target="#fxamarela"> <img src="FaixaAmarela.png" width="75%" class="mt-2"> <p class="t-japones" style="font-size: 20px;">Faixa Amarela</p> </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="card-border shadow">
+                    <a data-bs-toggle="modal" data-bs-target="#fxpontalaranja"> <img src="PontaLaranja.png" width="75%" class="mt-2"> <p class="t-japones" style="font-size: 20px;">Faixa Ponta Laranja</p> </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="card-border shadow">
+                    <a data-bs-toggle="modal" data-bs-target="#fxlaranja"> <img src="FaixaLaranja.png" width="75%" class="mt-2"> <p class="t-japones" style="font-size: 20px;">Faixa Laranja</p> </a>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center mt-3">
+            <div class="col-md-4 col-12">
+                <div class="card-border shadow">
+                    <a data-bs-toggle="modal" data-bs-target="#fxverde"> <img src="FaixaVerde.png" width="75%" class="mt-2"> <p class="t-japones" style="font-size: 20px;">Faixa Verde</p> </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="card-border shadow">
+                    <a data-bs-toggle="modal" data-bs-target="#fxroxa"> <img src="FaixaRoxa.png" width="75%" class="mt-2"> <p class="t-japones" style="font-size: 20px;">Faixa Roxa</p> </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="card-border shadow">
+                    <a data-bs-toggle="modal" data-bs-target="#fxmarrom"> <img src="FaixaMarrom.png" width="75%" class="mt-2"> <p class="t-japones" style="font-size: 20px;">Faixa Marrom</p> </a>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center mt-3">
+            <div class="col-md-4 col-12">
+                <div class="card-border shadow">
+                    <a data-bs-toggle="modal" data-bs-target="#fxpreta"> <img src="FaixaPreta.png" width="75%" class="mt-2"> <p class="t-japones" style="font-size: 20px;">Faixa Preta</p> </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="card-border shadow">
+                    <a data-bs-toggle="modal" data-bs-target="#fxcoral"> <img src="FaixaCoral.png" width="75%" class="mt-2"> <p class="t-japones" style="font-size: 20px;">Faixa Coral</p> </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="card-border shadow">
+                    <a data-bs-toggle="modal" data-bs-target="#fxvermelha"> <img src="FaixaVermelha.png" width="75%" class="mt-2"> <p class="t-japones" style="font-size: 20px;">Faixa Vermelha</p> </a>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Faixa Branca -->
+        <div class="modal fade " id="fxbranca" tabindex="-1" aria-labelledby="fxbrancaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl ">
+                <div class="modal-content text-center">
+                    <div class="modal-header" style="background-color: #ffffff;">
+                        <p class="modal-title t-japones text-white" style="font-size: 25px;" id="fxbrancaLabel">Faixa Branca</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="font-padrao">A Faixa Branca é a faixa inicial do Judô, Quando começamos a praticar o Esporte, iniciamos na Faixa Branca, Assim, sem precisar ter um conhecimento sobre o Judô</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Faixa Branca -->
+
+
+        <!-- Modal Faixa Branca Ponta Cinza -->
+        <div class="modal fade " id="fxpontacinza" tabindex="-1" aria-labelledby="fxpontacinzaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl ">
+                <div class="modal-content text-center">
+                    <div class="modal-header pontacinza">
+                        <p class="modal-title t-japones text-white" style="font-size: 25px;" id="fxpontacinzaLabel">Faixa Ponta Cinza</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="font-padrao">A Faixa Branca Ponta Cinza, é a entermediária da Branca e da Cinza, Você gradua para ela, quando não esta com os conhecimentos adequados para a Faixa Cinza, Porém esta melhor que a Faixa Branca, dependendo de qual dojô você treina, pode ser medido por exames práticos ou diários.</p>
+                        <p class="font-padrao">Para se garduar para a faixa Cinza é preciso de:</p>
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Carência:</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">3 meses de prática</p>  
+
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Shisei (postura):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Tyokuritsu;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Sei-Za;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Agura;</p>                        
+
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Ukemi (quedas):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ushiro-Ukemi;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Yoko-Ukemi;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Mae-Ukemi;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Zenpo-Kaiten-Ukemi / Mae Mawari Ukemi;</p>                        
+
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Nage-Waza (técnicas de projeção):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Osoto-gari;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Deashi-Harai;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Koshi-guruma;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">O-goshi;</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Katame Waza (técnicas de solo):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Kesa-Gatame;</p>                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Faixa Branca Ponta Cinza -->
+
+
+        <!-- Modal Faixa Cinza -->
+        <div class="modal fade " id="fxcinza" tabindex="-1" aria-labelledby="fxcinzaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl ">
+                <div class="modal-content text-center">
+                    <div class="modal-header" style="background-color: #a2a2a2;">
+                        <p class="modal-title t-japones text-white" style="font-size: 25px;" id="fxcinzaLabel">Faixa Cinza</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="font-padrao">A Faixa Cinza é a Segunda Cor de Faixa do Judô, para se garduar para ela é preciso de:</p>
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Carência:</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">3 meses de prática</p>  
+
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Shisei (postura):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Tyokuritsu;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Sei-Za;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Agura;</p>                        
+
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Ukemi (quedas):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ushiro-Ukemi;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Yoko-Ukemi;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Mae-Ukemi;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Zenpo-Kaiten-Ukemi / Mae Mawari Ukemi;</p>                        
+
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Nage-Waza (técnicas de projeção):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Osoto-gari;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Deashi-Harai;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Koshi-guruma;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">O-goshi;</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Katame Waza (técnicas de solo):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Kesa-Gatame;</p>                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Faixa Cinza -->
+
+
+        <!-- Modal Faixa Cinza Ponta Azul -->
+        <div class="modal fade " id="fxpontaazul" tabindex="-1" aria-labelledby="fxpontaazulLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl ">
+                <div class="modal-content text-center">
+                    <div class="modal-header pontaazul">
+                        <p class="modal-title t-japones text-white" style="font-size: 25px;" id="fxpontaazulLabel">Faixa Ponta Azul</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="font-padrao">A Faixa Cinza Ponta Azul, é a entermediária da Cinza e da Azul, Você gradua para ela, quando não esta com os conhecimentos adequados para a Faixa Azul, Porém esta melhor que a Faixa Cinza, dependendo de qual dojô você treina, pode ser medido por exames práticos ou diários.</p>
+                        <p class="font-padrao">A Faixa Azul é a Terceira Cor de Faixa do Judô, para se garduar para ela é preciso de:</p>
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Carência:</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">6 meses de Faixa Cinza.</p>  
+
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Shisei (postura):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Tyokuritsu;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Sei-Za;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Agura.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Rei ho (saudação):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ritsu-Rei;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Za-Rei.</p>                        
+
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Ukemi (quedas):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ushiro-Ukemi;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Yoko-Ukemi;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Mae-Ukemi;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Zenpo-Kaiten-Ukemi / Mae Mawari Ukemi.</p>                        
+
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Nage-Waza (técnicas de projeção):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Osoto-gari;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ippon-Seoi-Nague;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Deashi-Harai;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Hiza-Guruma;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Koshi-Guruma;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ouchi-Gari;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">O-Goshi.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Katame Waza (técnicas de solo):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Kesa-Gatame;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Yoko-Shiho-Gatame.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Competições de Judô:</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">1 Participação.</p>                               
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Faixa Cinza Ponta Azul -->
+
+
+        <!-- Modal Faixa Azul -->
+        <div class="modal fade " id="fxazul" tabindex="-1" aria-labelledby="fxazulLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl ">
+                <div class="modal-content text-center">
+                    <div class="modal-header" style="background-color: #34ddff;">
+                        <p class="modal-title t-japones text-white" style="font-size: 25px;" id="fxazulLabel">Faixa Azul</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="font-padrao">A Faixa Azul é a Terceira Cor de Faixa do Judô, para se garduar para ela é preciso de:</p>
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Carência:</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">6 meses de Faixa Cinza.</p>  
+
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Shisei (postura):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Tyokuritsu;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Sei-Za;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Agura.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Rei ho (saudação):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ritsu-Rei;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Za-Rei.</p>                        
+
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Ukemi (quedas):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ushiro-Ukemi;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Yoko-Ukemi;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Mae-Ukemi;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Zenpo-Kaiten-Ukemi / Mae Mawari Ukemi.</p>                        
+
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Nage-Waza (técnicas de projeção):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Osoto-gari;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ippon-Seoi-Nague;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Deashi-Harai;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Hiza-Guruma;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Koshi-Guruma;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ouchi-Gari;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">O-Goshi.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Katame Waza (técnicas de solo):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Kesa-Gatame;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Yoko-Shiho-Gatame.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Competições de Judô:</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">1 Participação.</p>                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Faixa Azul -->
+
+
+        <!-- Modal Faixa Azul Ponta Amarela -->
+        <div class="modal fade " id="fxpontaamarela" tabindex="-1" aria-labelledby="fxpontaamarelaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl ">
+                <div class="modal-content text-center">
+                    <div class="modal-header pontamarela">
+                        <p class="modal-title t-japones text-white" style="font-size: 25px;" id="fxpontaamarelaLabel">Faixa Ponta Amarela</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="font-padrao">A Faixa Azul Ponta Amarela, é a entermediária da Azul e da Amarela, Você gradua para ela, quando não esta com os conhecimentos adequados para a Faixa Amarela, Porém esta melhor que a Faixa Azul, dependendo de qual dojô você treina, pode ser medido por exames práticos ou diários.</p>
+                        <p class="font-padrao">A Faixa Amarela é a Quarta Cor de Faixa do Judô, para se garduar para ela é preciso de:</p>
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Carência:</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">9 meses de Faixa Azul.</p>  
+
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Shisei (postura):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Tyokuritsu;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Sei-Za;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Agura;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Shizen-Hontai;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Migui-Shizen-Tai;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Hidari-Shizen-Tai.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Rei ho (saudação):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ritsu-Rei;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Za-Rei.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Ukemi (quedas):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ushiro-Ukemi;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Yoko-Ukemi;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Mae-Ukemi;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Zenpo-Kaiten-Ukemi / Mae Mawari Ukemi.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Nage-Waza (técnicas de projeção):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">1. Go Kyo completo.</p>                                         
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Renraku-Renka-Waza (seqüência):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Deashi-Harai - Osoto-Gari;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ouchi-Gari - Osoto-Gari.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Katame Waza (técnicas de solo):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Kesa-Gatame;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Yoko-Shiho-Gatame;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Kami-Shiho-Gatame.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Competições de Judô:</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">2 Participação.</p>    
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Faixa Azul Ponta Amarela -->
+
+
+        <!-- Modal Faixa Amarela -->
+        <div class="modal fade " id="fxamarela" tabindex="-1" aria-labelledby="fxamarelaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl ">
+                <div class="modal-content text-center">
+                    <div class="modal-header" style="background-color: #ffcf00;">
+                        <p class="modal-title t-japones text-white" style="font-size: 25px;" id="fxamarelaLabel">Faixa Amarela</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="font-padrao">A Faixa Azul é a Terceira Cor de Faixa do Judô, para se garduar para ela é preciso de:</p>
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Carência:</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">9 meses de Faixa Azul.</p>  
+
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Shisei (postura):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Tyokuritsu;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Sei-Za;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Agura;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Shizen-Hontai;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Migui-Shizen-Tai;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Hidari-Shizen-Tai.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Rei ho (saudação):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ritsu-Rei;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Za-Rei.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Ukemi (quedas):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ushiro-Ukemi;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Yoko-Ukemi;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Mae-Ukemi;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Zenpo-Kaiten-Ukemi / Mae Mawari Ukemi.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Nage-Waza (técnicas de projeção):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">1. Go Kyo completo.</p>                                         
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Renraku-Renka-Waza (seqüência):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Deashi-Harai - Osoto-Gari;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ouchi-Gari - Osoto-Gari.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Katame Waza (técnicas de solo):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Kesa-Gatame;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Yoko-Shiho-Gatame;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Kami-Shiho-Gatame.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Competições de Judô:</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">2 Participação.</p>                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Faixa Amarela -->
+        
+        
+        <!-- Modal Faixa Amarela Ponta Laranja -->
+        <div class="modal fade " id="fxpontalaranja" tabindex="-1" aria-labelledby="fxpontalaranjaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl ">
+                <div class="modal-content text-center">
+                    <div class="modal-header pontalaranja">
+                        <p class="modal-title t-japones text-white" style="font-size: 25px;" id="fxpontalaranjaLabel">Faixa Ponta Laranja</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="font-padrao">A Faixa Amarela Ponta Laranja, é a entermediária da Amarela e da Laranja, Você gradua para ela, quando não esta com os conhecimentos adequados para a Faixa Laranja, Porém esta melhor que a Faixa Amarela, dependendo de qual dojô você treina, pode ser medido por exames práticos ou diários.</p>
+                        <p class="font-padrao">A Faixa Laranja é a Quinta Cor de Faixa do Judô, para se garduar para ela é preciso de:</p>
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Carência:</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">1 ano de Faixa Amarela.</p>  
+
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Shisei (postura):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Tyokuritsu;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Sei-Za;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Agura;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Shizen-Hontai;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Migui-Shizen-Tai;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Hidari-Shizen-Tai.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Tai Sabaki (movimentação):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Migui-Ashi-Mae-Sabaki;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Hidari-Ashi-Mae-Sabaki.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Nage-No-Kata (Formas de projeção):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Te - Waza (Tori e Uke)</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Rei ho (saudação):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ritsu-Rei;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Za-Rei.</p>                                           
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Nage-Waza (técnicas de projeção):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Primeiro Go Kyo completo (Dai-ikkyo);</p>                                         
+                        <p class="font-padrao m-0" style="font-size: 15px;">Segundo Go Kyo completo (Dai-nikyo).</p>                                         
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Renraku-Renka-Waza (seqüência):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Primeira série completa;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Segunda série completa.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Katame Waza (técnicas de solo):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Kesa-Gatame;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Yoko-Shiho-Gatame;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Kami-Shiho-Gatame;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Tate-Shiho-Gatame.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Competições de Judô:</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">4 Participação;</p>    
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ser filiado à Federação Paulista de Judô (FPJ).</p>    
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Faixa Amarela Ponta Laranja -->
+        
+        
+        <!-- Modal Faixa Laranja -->
+        <div class="modal fade " id="fxlaranja" tabindex="-1" aria-labelledby="fxlaranjaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl ">
+                <div class="modal-content text-center">
+                    <div class="modal-header" style="background-color: #ff8f00;">
+                        <p class="modal-title t-japones text-white" style="font-size: 25px;" id="fxlaranjaLabel">Faixa Laranja</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="font-padrao">A Faixa Laranja é a Quinta Cor de Faixa do Judô, para se garduar para ela é preciso de:</p>
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Carência:</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">1 ano de Faixa Amarela.</p>  
+
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Shisei (postura):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Tyokuritsu;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Sei-Za;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Agura;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Shizen-Hontai;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Migui-Shizen-Tai;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Hidari-Shizen-Tai.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Tai Sabaki (movimentação):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Migui-Ashi-Mae-Sabaki;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Hidari-Ashi-Mae-Sabaki.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Nage-No-Kata (Formas de projeção):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Te - Waza (Tori e Uke)</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Rei ho (saudação):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ritsu-Rei;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Za-Rei.</p>                                           
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Nage-Waza (técnicas de projeção):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Primeiro Go Kyo completo (Dai-ikkyo);</p>                                         
+                        <p class="font-padrao m-0" style="font-size: 15px;">Segundo Go Kyo completo (Dai-nikyo).</p>                                         
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Renraku-Renka-Waza (seqüência):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Primeira série completa;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Segunda série completa.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Katame Waza (técnicas de solo):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Kesa-Gatame;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Yoko-Shiho-Gatame;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Kami-Shiho-Gatame;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Tate-Shiho-Gatame.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Competições de Judô:</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">4 Participação;</p>    
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ser filiado à Federação Paulista de Judô (FPJ).</p>    
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Faixa Laranja -->
+
+
+        <!-- Modal Faixa Verde -->
+        <div class="modal fade " id="fxverde" tabindex="-1" aria-labelledby="fxverdeLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl ">
+                <div class="modal-content text-center">
+                    <div class="modal-header" style="background-color: #24b212;">
+                        <p class="modal-title t-japones text-white" style="font-size: 25px;" id="fxverdeLabel">Faixa Verde</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="font-padrao">A Faixa Verde é a Sexta Cor de Faixa do Judô, para se garduar para ela é preciso de:</p>
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Carência:</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">12 anos de idade;</p>  
+                        <p class="font-padrao m-0" style="font-size: 15px;">1 ano de Faixa Laranja.</p>  
+
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Shisei (postura):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Tyokuritsu;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Sei-Za;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Agura;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Shizen-Hontai;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Migui-Shizen-Tai;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Hidari-Shizen-Tai.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Tai Sabaki (movimentação):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Migui-Ashi-Mae-Sabaki;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Hidari-Ashi-Mae-Sabaki;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Migui-Ashi-Mae-Mawari-Sabaki;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Hidari-Ashi-Mae-Mawari-Sabaki.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Nage-No-Kata (Formas de projeção):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Te - Waza (Tori e Uke);</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Koshi-Waza (Tori e Uke).</p>                                                          
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Nage-Waza (técnicas de projeção):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Primeiro Go Kyo completo (Dai-ikkyo);</p>                                         
+                        <p class="font-padrao m-0" style="font-size: 15px;">Segundo Go Kyo completo (Dai-nikyo);</p>                                         
+                        <p class="font-padrao m-0" style="font-size: 15px;">Terceiro Go Kyo completo (Dai-sankyo).</p>                                         
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Renraku-Renka-Waza (seqüência):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Primeira série completa;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Segunda série completa;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Terceira série completa.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Katame Waza (técnicas de solo):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Kesa-Gatame;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Yoko-Shiho-Gatame;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Kami-Shiho-Gatame;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ushiro-Kesa-Gatame;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Tate-Shiho-Gatame.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Competições de Judô:</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Mínimo 10 pontos;</p>    
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ser filiado à Federação Paulista de Judô (FPJ).</p>    
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Faixa Verde -->
+
+
+        <!-- Modal Faixa Roxa -->
+        <div class="modal fade " id="fxroxa" tabindex="-1" aria-labelledby="fxroxaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl ">
+                <div class="modal-content text-center">
+                    <div class="modal-header" style="background-color: #771aae;">
+                        <p class="modal-title t-japones text-white" style="font-size: 25px;" id="fxroxaLabel">Faixa Roxa</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="font-padrao">A Faixa Roxa é a Sétima Cor de Faixa do Judô, para se garduar para ela é preciso de:</p>
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Carência:</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">13 anos de idade;</p>  
+                        <p class="font-padrao m-0" style="font-size: 15px;">1 ano de Faixa Verde.</p>  
+
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Shisei (postura):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Tyokuritsu;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Sei-Za;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Agura;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Shizen-Hontai;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Migui-Shizen-Tai;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Jigo-Hontai;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Migui-Jigo-Tai;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Hidari-Jigo-Tai;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Hidari-Shizen-Tai.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Tai Sabaki (movimentação):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Migui-Ashi-Mae-Sabaki;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Hidari-Ashi-Mae-Sabaki;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Migui-Ashi-Mae-Mawari-Sabaki;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Hidari-Ashi-Mae-Mawari-Sabaki.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Nage-No-Kata (Formas de projeção):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Te - Waza (Tori e Uke);</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Koshi-Waza (Tori e Uke);</p>                                                          
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ashi-Waza (Tori e Uke).</p>                                                          
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Nage-Waza (técnicas de projeção):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Primeiro Go Kyo completo (Dai-ikkyo);</p>                                         
+                        <p class="font-padrao m-0" style="font-size: 15px;">Segundo Go Kyo completo (Dai-nikyo);</p>                                         
+                        <p class="font-padrao m-0" style="font-size: 15px;">Terceiro Go Kyo completo (Dai-sankyo);</p>                                         
+                        <p class="font-padrao m-0" style="font-size: 15px;">Quarto Go Kyo completo (Dai-yonkyo);</p>                                         
+                        <p class="font-padrao m-0" style="font-size: 15px;">Quinto Go Kyo completo (Dai-gokyo).</p>                                         
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Renraku-Renka-Waza (seqüência):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Primeira série completa;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Segunda série completa;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Terceira série completa;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Quarta série completa.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Katame Waza (técnicas de solo):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Kesa-Gatame;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Yoko-Shiho-Gatame;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Kami-Shiho-Gatame;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ushiro-Kesa-Gatame;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Kuzure-Kesa-Gatame;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Tate-Shiho-Gatame;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Kuzure-Kami-Gatame.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Competições de Judô:</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Mínimo 10 Pontos + 6 pontos de colaboração.</p>    
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Faixa Roxa -->
+
+
+        <!-- Modal Faixa Marrom -->
+        <div class="modal fade " id="fxmarrom" tabindex="-1" aria-labelledby="fxmarromLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl ">
+                <div class="modal-content text-center">
+                    <div class="modal-header" style="background-color: #765000;">
+                        <p class="modal-title t-japones text-white" style="font-size: 25px;" id="fxmarromLabel">Faixa Marrom</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="font-padrao">A Faixa Marrom é a Oitava Cor de Faixa do Judô, para se garduar para ela é preciso de:</p>
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Carência:</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">14 anos de idade;</p>  
+                        <p class="font-padrao m-0" style="font-size: 15px;">1 ano de Faixa Roxa.</p>  
+
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Shisei (postura):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Todas as formas.</p>                                      
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Tai Sabaki (movimentação):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Todas as formas.</p>                                       
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Nage-No-Kata (completo):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Te - Waza (Tori e Uke);</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Koshi-Waza (Tori e Uke);</p>                                                          
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ashi-Waza (Tori e Uke);</p>                                                          
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ma-Sutemi-Waza (Tori e Uke);</p>                                                          
+                        <p class="font-padrao m-0" style="font-size: 15px;">Yoko-Sutemi-Waza (Tori e Uke).</p>                                                          
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Nage-Waza (técnicas de projeção):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Primeiro Go Kyo completo (Dai-ikkyo);</p>                                         
+                        <p class="font-padrao m-0" style="font-size: 15px;">Segundo Go Kyo completo (Dai-nikyo);</p>                                         
+                        <p class="font-padrao m-0" style="font-size: 15px;">Terceiro Go Kyo completo (Dai-sankyo);</p>                                         
+                        <p class="font-padrao m-0" style="font-size: 15px;">Quarto Go Kyo completo (Dai-yonkyo);</p>                                         
+                        <p class="font-padrao m-0" style="font-size: 15px;">Quinto Go Kyo completo (Dai-gokyo);</p>                                         
+                        <p class="font-padrao m-0" style="font-size: 15px;">Extra Go Kyo.</p>                                         
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Renraku-Renka-Waza (seqüência):</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Primeira série completa;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Segunda série completa;</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Osaekomi-Waza:</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Completo</p>                                            
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Shime-Waza:</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Gyaku-juji-jime;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Kata-juji-jime;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Nami-juji-jime;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Hadaka-jime;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Okuri-eri-jime;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Sankaku-jime.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Kansetsu-Waza:</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ude-hishigui-juji-gatame;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ude-hishigui-waki-gatame;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ude-hishigui-ude-gatame;</p>                        
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ude-hishigui-hara-gatame;</p>                                          
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ude-garami.</p>                        
+                        
+                        <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Competições de Judô:</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Mínimo 16 Pontos + 10 pontos de colaboração.</p>    
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Faixa Marrom -->
+
+
+        <!-- Modal Faixa Preta -->
+        <div class="modal fade " id="fxpreta" tabindex="-1" aria-labelledby="fxpretaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl ">
+                <div class="modal-content text-center">
+                    <div class="modal-header" style="background-color: #212121;">
+                        <p class="modal-title t-japones text-white" style="font-size: 25px;" id="fxpretaLabel">Faixa Preta</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <p class="font-padrao">A Faixa Marrom é a Oitava Cor de Faixa do Judô, para se garduar para ela é preciso de:</p>
+                    <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Carência:</p>
+                    <p class="font-padrao m-0" style="font-size: 15px;">15 anos de idade;</p>  
+                    <p class="font-padrao m-0" style="font-size: 15px;">1 ano de Faixa Marrom.</p>  
+
+                    <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Shisei (postura):</p>
+                    <p class="font-padrao m-0" style="font-size: 15px;">Todas as formas completo.</p>                                      
+                    
+                    <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Tai Sabaki (movimentação):</p>
+                    <p class="font-padrao m-0" style="font-size: 15px;">Todas as formas completo.</p>                                       
+                    
+                    <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Nage-No-Kata (completo):</p>
+                    <p class="font-padrao m-0" style="font-size: 15px;">Todas as formas completo.</p>                                                                             
+                    
+                    <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Nage-Waza (técnicas de projeção):</p>
+                    <p class="font-padrao m-0" style="font-size: 15px;">Todas as formas completo.</p>                                                                            
+                    
+                    <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Renraku-Renka-Waza (seqüência):</p>
+                    <p class="font-padrao m-0" style="font-size: 15px;">Todas as séries completo.</p>                                            
+                    
+                    <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Osaekomi-Waza:</p>
+                    <p class="font-padrao m-0" style="font-size: 15px;">Todas as formas completo.</p>                                            
+                    
+                    <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Shime-Waza:</p>
+                    <p class="font-padrao m-0" style="font-size: 15px;">Todas as formas completo.</p>                                             
+                    
+                    <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Kansetsu-Waza:</p>
+                    <p class="font-padrao m-0" style="font-size: 15px;">Todas as formas completo./p>                                            
+                    
+                    <p class="t-japones mt-3 mb-0" style="font-size: 25px;">Competições de Judô:</p>
+                    <p class="font-padrao m-0" style="font-size: 15px;">Mínimo 20 Pontos + 15 pontos de colaboração.</p>    
+                </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Faixa Preta -->
+        
+        
+        <!-- Modal Faixa Coral -->
+        <div class="modal fade " id="fxcoral" tabindex="-1" aria-labelledby="fxcoralLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl ">
+                <div class="modal-content text-center">
+                    <div class="modal-header coral">
+                        <p class="modal-title t-japones text-white" style="font-size: 25px;" id="fxcoralLabel">Faixa Coral</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="font-padrao">A Faixa Coral é a Penultima Cor de Faixa do Judô, para se garduar para ela é preciso de:</p>
+                        <p class="font-padrao m-0" style="font-size: 15px;">Ser Faixa Preta e ganhar uma medalha de ouro olímpica, pan-americano, Mundial, ou algo do tipo, Assim, quando se aposentar dos campeonatos, você se gradua para a Faixa Coral. Após o quinto grau de dan (Godan), o praticante evolui para outras cores das faixas do judô, conforme lista abaixo: 6º dan (rokudan): Faixa Coral (vermelha e branca) (8 anos); 7º dan (nanadan): Faixa Coral (vermelha e branca) (8 anos);</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Faixa Coral -->
+
+
+        <!-- Modal Faixa Vermelha -->
+        <div class="modal fade " id="fxvermelha" tabindex="-1" aria-labelledby="fxvermelhaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl ">
+                <div class="modal-content text-center">
+                    <div class="modal-header" style="background-color: #ff2626;">
+                        <p class="modal-title t-japones text-white" style="font-size: 25px;" id="fxvermelhaLabel">Faixa Vermelha</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="font-padrao">A Faixa Vermelha é a ÚLTIMA Faixa do Judô:</p>
+                        <p class="t-japones m-0" style="font-size: 25px;">Os mestres de 9º e 10º dan usam a faixa vermelha.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Faixa Vermelha -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

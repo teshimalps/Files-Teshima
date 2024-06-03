@@ -1,0 +1,79 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 't-japones';
+    src: url(../fonts/go3v2.ttf);
+}
+
+@font-face {
+    font-family: 'st-japones';
+    src: url(../fonts/Harukaze.ttf);
+}
+
+@font-face {
+    font-family: 'font-padrao';
+    src: url(../fonts/FrancoisOne-Regular.ttf);
+}
+
+.t-japones{    
+    font-family: 't-japones';
+}
+
+.st-japones{
+    font-family: 'st-japones';
+}
+
+.font-padrao{
+    font-family: 'font-padrao';
+}
+
+
+.interface{
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+section{
+    height: 100vh;
+    scroll-snap-align: start;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+@media only screen and (max-width: 576px) {
+    .text-size-cel{
+        font-size: 40px !important;
+    }
+    .text-size-cel-title{
+        font-size: 50px !important;
+    }
+    .text-size-cel-subtitle{
+        font-size: 14px !important;
+    }
+    .width-video-cel{
+        width: 100%;
+        height: 91.5%;
+    }
+    .width-video-cel-pqn{
+        width: 100%;
+        height: 80.8%;
+    }
+    .margin-top-cel{
+        margin-top: 0px;
+    }
+    .margin-bottom-cel{
+        margin-bottom: 1.5rem !important;
+    }
+    .margin-text{
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+    }
+    .align-cel{
+        text-align: center;
+    }
+    .padding-cel{
+        padding-bottom: 2vh;
+    }
+}    
+
