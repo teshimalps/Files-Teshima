@@ -1,0 +1,257 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'font-padrao-d';
+    src: url(Fonts/AlumniSans-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: 'font-padrao-d-bold';
+    src: url(Fonts/AlumniSans-SemiBoldItalic.ttf);
+}
+
+@font-face {
+    font-family: 'font-padrao-d-extrabold';
+    src: url(Fonts/AlumniSans-BlackItalic.ttf);
+}
+
+@font-face {
+    font-family: 'font-padrao';
+    src: url(Fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'font-padrao-semibold';
+    src: url(Fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'font-padrao-bold';
+    src: url(Fonts/Poppins-Bold.ttf);
+}
+
+.font-padrao-d{
+    font-family: "font-padrao-d";
+}
+
+.font-padrao-d-bold{
+    font-family: "font-padrao-d-bold";
+}
+
+.font-padrao-d-extrabold{
+    font-family: "font-padrao-d-extrabold";
+}
+
+.font-padrao{
+    font-family: "font-padrao";
+}
+
+.font-padrao-semibold{
+    font-family: "font-padrao-semibold";
+}
+
+.font-padrao-bold{
+    font-family: "font-padrao-bold";
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+}
+
+:root{
+    --main-color: #f4db4c;
+    --submain-color: #f4902e;
+    --text-color: #fff;
+    --sub-color: #cacaca;
+    --other-color: #212121;
+    --second-color: #2f2f2f;
+    --bg-color: #212121;
+
+    --big-font: 4.5rem;
+    --h2-font: 2.6rem;
+    --p-font: 1.5rem;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(images/Fundo.png);
+    padding: 15px 14%;
+}
+
+.navlist{
+    display: flex;
+}
+
+.navlist a{
+    color: var(--text-color);
+    font-size: var(--p-font);
+    margin: 0 50px;
+    transition: all .50s ease;
+}
+
+.navlist a:hover{
+     color: var(--sub-color)
+}
+
+.nav-icons{      
+    display: flex;  
+    background: rgb(244,219,76);
+    background: linear-gradient(145deg, rgba(244,219,76,1) 0%, rgba(244,144,46,1) 100%);
+    align-items: center;  
+    padding: 7px 30px;  
+    border-radius: 3rem;  
+    box-shadow: #f4db4c 0px 2px 30px, #f4902e 0px 2px 30px; 
+    animation: neon-glow 1.5s ease-in-out infinite alternate; 
+}
+.arrow-down img{
+    position: relative;
+    animation: flutuar 1s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 10px;
+    }
+}
+
+@keyframes neon-glow {
+    0% {
+        box-shadow: 0 0 30px #f4db4c, 0 0 30px #f4902e;
+    }
+    100% {
+        box-shadow: 0 0 30px #f4db4c, 0 0 30px #f4902e;
+    }
+}
+
+.nav-icons i{  
+    vertical-align: middLe;  
+    font-size: 25px;  
+    color: var(--bg-color);  
+    margin-right: 15px;  
+    margin-Left: 5px;  
+    transition: all .50s ease;  
+}
+
+#menu-icon{  
+    margin-top: 2px;
+    font-size: 25px;  
+    color: var(--bg-color);  
+    z-index: 10001;  
+    cursor: pointer;;  
+}
+
+.text-fade{
+    background-image: linear-gradient( to bottom, #f4db4c, #f4902e);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.card-cardapio{
+    background-color: #2F2F2F;
+    height: 175px;
+    border-radius: 50px;
+}
+.card-combo{
+    background-color: #2F2F2F;
+    height: 150px;
+    border-radius: 50px;
+}
+.card-aval{
+    background-color: #2F2F2F;
+    height: 150px;
+    border-radius: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.card-promo-dia{
+    background-color: #2F2F2F;
+    height: 700px;
+    border-radius: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.img-lanche{
+    height: 500px;
+}
+
+.card-bebida{
+    background-color: #2F2F2F;
+    height: 125px;
+    border-radius: 50px;
+}
+@media only screen and (max-width: 576px) {
+    .margin-line-header{
+        margin-left: 35px !important;
+        width: 23% !important;                    
+    }
+    .margin-cont-header{
+        margin-left: 5px !important;                    
+    }
+    .font-subtitulo{
+        font-size: 25px !important;
+    }
+    .font-titulo{     
+        margin-top: -50px !important;       
+        font-size: 70px !important;
+    }
+    .font-cont{
+        font-size: 11px !important;
+    }
+    .margin-sub{
+        margin-top: -25px !important;
+    }
+    .margin-curtline-font{
+        margin-top: -10px !important;
+    }
+    .ico-mob{
+        width:  10% !important;
+        height: 10% !important;
+    }
+    .font-icos{
+        margin-top: 0px !important;
+        font-size: 11px !important;
+    }
+    .margin-1-ico{
+        margin-top: 10px !important;
+    }
+    .margin-2-ico{
+        margin-top: 0px !important;
+    }
+    .btn-header{
+        width: 50% !important;
+    }
+    .width-arrow{
+        width: 8% !important;
+    }
+    .text-titulo{
+        font-size: 35px !important;
+    }
+    .text-subtitulo{
+        font-size: 18px !important;
+    }
+    .margin-card-mob{
+        margin-top: 15px !important;
+    }
+    .text-card-titulo{
+        font-size: 15px;
+    }
+}      
