@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/pc/Dui.ico" type="image/x-icon">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <title>Dui Burguer Berr</title>
+    <style>
+        .index{
+            background-image: url(Images/Fundo.png);
+            height: 180vh;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        .card-m{
+            height: 400px;
+            background-color: #2F2F2F;
+            border-radius: 50px;
+        }
+        table tr th{
+            background-color: transparent !important;
+        }
+
+        
+        .size-nom-pro{
+            width: 250px;
+            padding-right: 25px;
+        }
+        .size-des-pro{
+            width: 718px;
+            margin-right: 25px;
+        }
+        .size-val-pro{
+            width: 75px;
+            margin-right: 25px;
+        }
+        .size-det-pro{
+            width: 125px;
+            margin-right: 25px;
+        }
+        .size-edi-pro{
+            width: 75px;
+            margin-right: 25px;
+        }
+        .size-exc-pro{
+            width: 75px;
+            margin-right: 25px;
+        }
+
+
+        .size-des-his{
+            width: 900px;
+            padding-right: 25px;
+        }
+        .size-cli-his{
+            width: 183px;
+            margin-right: 25px;
+        }
+        .size-tot-his{
+            width: 110px;
+            margin-right: 25px;
+        }
+        .size-det-his{
+            width: 125px;
+            margin-right: 25px;
+        }
+
+        
+        .size-usu-usu{
+            width: 100px;
+            margin-right: 25px;
+        }
+        .size-tip-usu{
+            width: 79px;
+            margin-right: 25px;
+        }
+        .size-sen-usu{
+            width: 80px;
+            margin-right: 25px;
+        }
+        .size-det-usu{
+            width: 110px;
+            margin-right: 25px;
+        }
+        .size-edi-usu{
+            width: 75px;
+            margin-right: 25px;
+        }
+        .size-exc-usu{
+            width: 75px;
+            margin-right: 25px;
+        }
+
+
+        .item-esc{
+            height: 50px;
+            background-color: #2C2C2C !important;
+            padding-left: 50px !important;
+            padding-right: 50px !important;
+        }
+        .item-cla{
+            height: 50px;
+            background-color: #2F2F2F !important;
+            padding-left: 50px !important;
+            padding-right: 50px !important;
+        }
+        button{
+            background-color: transparent !important;
+            border: transparent !important;
+        }
+        .head{
+            height: 50px;
+            border-radius: 50px 50px 0px 0px;
+        }   
+        .item-ver-mais{            
+            border-radius: 0px 0px 50px 50px;
+            text-align: center;
+        }
+        .item-cri-pro{        
+            border-radius: 0px 0px 50px 50px;
+            text-align: center;
+        }
+        .item-fade{
+            height: 50px;
+            background: rgb(244,219,76);
+            background: linear-gradient(135deg, rgba(244,219,76,1) 0%, rgba(244,144,46,1) 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="index">
+        <div class="cont">
+            <div class="row">
+                <div class="offset-1 col-10">
+                    <div class="row text-center">
+                        <div class="col-12">
+                            <p class="text-fade font-padrao-bold area-2" style="font-size: 40px; margin-top: 30px;">Administrativo</p>
+                        </div>
+                    </div>
+                    <!--Produtos-->
+                    <div class="produtos" style="margin-top: 25px;">
+                        <div class="row text-center">                    
+                            <div class="col-12">
+                                <p class="text-fade font-padrao-semibold area-12" style="font-size: 25px;">Produtos</p>                            
+                            </div>
+                        </div>
+                        <div class="row">                    
+                            <div class="col-12">
+                                <div class="card-m shadow area-12">
+    
+                                    <div class="tabela">
+    
+                                        <div class="d-flex head item-esc" style="padding-top: 7px;">
+                                            <tr>
+                                                <div class="size-nom-pro area-12"><p class="font-padrao-bold text-fade" style="font-size: 20px;">Nome</p></div>
+                                                <div class="size-des-pro area-12"><p class="font-padrao-bold text-fade" style="font-size: 20px;">Descrição</p></div>
+                                                <div class="size-val-pro area-12"><p class="font-padrao-bold text-fade" style="font-size: 20px;">Valor</p></div>
+                                                <div class="size-det-pro area-12 text-center"><p class="font-padrao-bold text-fade" style="font-size: 20px;">Detalhado</p></div>
+                                                <div class="size-edi-pro area-12 text-center"><p class="font-padrao-bold text-fade" style="font-size: 20px;">Editar</p></div>
+                                                <div class="size-exc-pro area-12 text-center"><p class="font-padrao-bold text-fade" style="font-size: 20px;">Excluir</p></div>
+                                            </tr>
+                                        </div>
+    
+                                        <div class="body">
+                                            <div class="d-flex item-cla item-1">
+                                                <tr>
+                                                    <div class="size-nom-pro area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">Dui Burguer</p></div>
+                                                    <div class="size-des-pro area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">Pão artesanal com um Hambúrguer de 200mg e 2 Fatias de M...</p></div>
+                                                    <div class="size-val-pro area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">R$84,90</p></div>
+                                                    <div class="size-det-pro area-12 text-center"><button><img src="images/BtnDetalhe.png"></button></div>
+                                                    <div class="size-edi-pro area-12 text-center"><button><img src="images/BtnEdit.png" alt=""></button></div>
+                                                    <div class="size-exc-pro area-12 text-center"><button><img src="images/BtnDelete.png" alt=""></button></div>
+                                                </tr>
+                                            </div>
+                                            <div class="d-flex item-esc item-2">
+                                                <tr>
+                                                    <div class="size-nom-pro area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">Dui Burguer Berr</p></div>
+                                                    <div class="size-des-pro area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">Pão artesanal com um Hambúrguer de 200mg, 2 Fatias de Moz...</p></div>
+                                                    <div class="size-val-pro area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">R$84,90</p></div>
+                                                    <div class="size-det-pro area-12 text-center"><button><img src="images/BtnDetalhe.png"></button></div>
+                                                    <div class="size-edi-pro area-12 text-center"><button><img src="images/BtnEdit.png" alt=""></button></div>
+                                                    <div class="size-exc-pro area-12 text-center"><button><img src="images/BtnDelete.png" alt=""></button></div>
+                                                </tr>
+                                            </div>
+                                            <div class="d-flex item-cla item-3">
+                                                <tr>
+                                                    <div class="size-nom-pro area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">Combo Dui Calabresa</p></div>
+                                                    <div class="size-des-pro area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">1 Dui Calabresa + 1 Batata Pequena + Refrigerante de 200ml</p></div>
+                                                    <div class="size-val-pro area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">R$84,90</p></div>
+                                                    <div class="size-det-pro area-12 text-center"><button><img src="images/BtnDetalhe.png"></button></div>
+                                                    <div class="size-edi-pro area-12 text-center"><button><img src="images/BtnEdit.png" alt=""></button></div>
+                                                    <div class="size-exc-pro area-12 text-center"><button><img src="images/BtnDelete.png" alt=""></button></div>
+                                                </tr>
+                                            </div>
+                                            <div class="d-flex item-esc item-4">
+                                                <tr>
+                                                    <div class="size-nom-pro area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">Combo Dui Frango</p></div>
+                                                    <div class="size-des-pro area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">1 Dui Frango + 1 Batata Pequena + Refrigerante de 200ml</p></div>
+                                                    <div class="size-val-pro area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">R$84,90</p></div>
+                                                    <div class="size-det-pro area-12 text-center"><button><img src="images/BtnDetalhe.png"></button></div>
+                                                    <div class="size-edi-pro area-12 text-center"><button><img src="images/BtnEdit.png" alt=""></button></div>
+                                                    <div class="size-exc-pro area-12 text-center"><button><img src="images/BtnDelete.png" alt=""></button></div>
+                                                </tr>
+                                            </div>
+                                            <div class="d-flex item-cla item-5">
+                                                <tr>
+                                                    <div class="size-nom-pro area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">Combo Dui Burguer</p></div>
+                                                    <div class="size-des-pro area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">1 Dui Burguer + 1 Batata Pequena + Refrigerante de 200ml</p></div>
+                                                    <div class="size-val-pro area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">R$84,90</p></div>
+                                                    <div class="size-det-pro area-12 text-center"><button><img src="images/BtnDetalhe.png"></button></div>
+                                                    <div class="size-edi-pro area-12 text-center"><button><img src="images/BtnEdit.png" alt=""></button></div>
+                                                    <div class="size-exc-pro area-12 text-center"><button><img src="images/BtnDelete.png" alt=""></button></div>
+                                                </tr>
+                                            </div>
+                                            <div class="d-flex item-esc item-6">
+                                                <tr>
+                                                    <div class="size-nom-pro area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">Combo Dui Egg</p></div>
+                                                    <div class="size-des-pro area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">1 Dui Egg + 1 Batata Pequena + Refrigerante de 200ml</p></div>
+                                                    <div class="size-val-pro area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">R$84,90</p></div>
+                                                    <div class="size-det-pro area-12 text-center"><button><img src="images/BtnDetalhe.png"></button></div>
+                                                    <div class="size-edi-pro area-12 text-center"><button><img src="images/BtnEdit.png" alt=""></button></div>
+                                                    <div class="size-exc-pro area-12 text-center"><button><img src="images/BtnDelete.png" alt=""></button></div>
+                                                </tr>
+                                            </div>
+                                            <div class="item-cla item-ver-mais" style="padding-top: 7px;">
+                                                <tr>
+                                                    <div class="size-ver-mais area-12" style="cursor: pointer;"><p class="font-padrao-bold text-fade" style="font-size: 20px;">Ver mais...</p></div>
+                                                </tr>
+                                            </div>
+                                            <div class="item-fade item-cri-pro area-12" style="padding-top: 7px; margin-left: 500px; margin-right: 500px; cursor: pointer;">
+                                                <tr>
+                                                    <div class="size-ver-mais area-12"><p class="font-padrao-bold" style="font-size: 20px; color: #2F2F2F;">Criar novo Produto</p></div>
+                                                </tr>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Produtos-->
+                    <!--Usuários e ???-->
+                    <div class="usuarios e ???" style="margin-top: 75px;">
+                        <div class="row text-center">                    
+                            <div class="col-6">
+                                <p class="text-fade font-padrao-semibold area-12" style="font-size: 25px;">Usuários</p>                            
+                            </div>
+                            <div class="col-6">
+                                <p class="text-fade font-padrao-semibold area-12" style="font-size: 25px;">???</p>                            
+                            </div>
+                        </div>
+                        <div class="row">        
+                            <!--Usuários-->            
+                            <div class="col-6">
+                                <div class="card-m shadow area-12">
+    
+                                    <div class="tabela">
+    
+                                        <div class="d-flex head item-esc" style="padding-top: 7px;">
+                                            <tr>
+                                                <div class="size-usu-usu area-12"><p class="font-padrao-bold text-fade" style="font-size: 20px;">User</p></div>
+                                                <div class="size-tip-usu area-12"><p class="font-padrao-bold text-fade" style="font-size: 20px;">Tipo</p></div>
+                                                <div class="size-sen-usu area-12"><p class="font-padrao-bold text-fade" style="font-size: 20px;">Senha</p></div>
+                                                <div class="size-det-usu area-12 text-center"><p class="font-padrao-bold text-fade" style="font-size: 20px;">Detalhado</p></div>
+                                                <div class="size-edi-usu area-12 text-center"><p class="font-padrao-bold text-fade" style="font-size: 20px;">Editar</p></div>
+                                                <div class="size-exc-usu area-12 text-center"><p class="font-padrao-bold text-fade" style="font-size: 20px;">Excluir</p></div>
+                                            </tr>
+                                        </div>
+    
+                                        <div class="body">
+                                            <div class="d-flex item-cla item-1">
+                                                <tr>
+                                                    <div class="size-usu-usu area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">kauan</p></div>
+                                                    <div class="size-tip-usu area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">MASTER</p></div>
+                                                    <div class="size-sen-usu area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">842d9a...</p></div>
+                                                    <div class="size-det-usu area-12 text-center"><button><img src="images/BtnDetalhe.png"></button></div>
+                                                    <div class="size-edi-usu area-12 text-center"><button><img src="images/BtnEdit.png" alt=""></button></div>
+                                                    <div class="size-exc-usu area-12 text-center"><button><img src="images/BtnDelete.png" alt=""></button></div>
+                                                </tr>
+                                            </div>
+                                            <div class="d-flex item-esc item-2">
+                                                <tr>
+                                                    <div class="size-usu-usu area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">sophia</p></div>
+                                                    <div class="size-tip-usu area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">MASTER</p></div>
+                                                    <div class="size-sen-usu area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">713d266...</p></div>
+                                                    <div class="size-det-usu area-12 text-center"><button><img src="images/BtnDetalhe.png"></button></div>
+                                                    <div class="size-edi-usu area-12 text-center"><button><img src="images/BtnEdit.png" alt=""></button></div>
+                                                    <div class="size-exc-usu area-12 text-center"><button><img src="images/BtnDelete.png" alt=""></button></div>
+                                                </tr>
+                                            </div>
+                                            <div class="d-flex item-cla item-3">
+                                                <tr>
+                                                    <div class="size-usu-usu area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">gabriel</p></div>
+                                                    <div class="size-tip-usu area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">USER</p></div>
+                                                    <div class="size-sen-usu area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">254fj4a...</p></div>
+                                                    <div class="size-det-usu area-12 text-center"><button><img src="images/BtnDetalhe.png"></button></div>
+                                                    <div class="size-edi-usu area-12 text-center"><button><img src="images/BtnEdit.png" alt=""></button></div>
+                                                    <div class="size-exc-usu area-12 text-center"><button><img src="images/BtnDelete.png" alt=""></button></div>
+                                                </tr>
+                                            </div>
+                                            <div class="d-flex item-esc item-4">
+                                                <tr>
+                                                    <div class="size-usu-usu area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">leonardo</p></div>
+                                                    <div class="size-tip-usu area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">USER</p></div>
+                                                    <div class="size-sen-usu area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">55ae1c2...</p></div>
+                                                    <div class="size-det-usu area-12 text-center"><button><img src="images/BtnDetalhe.png"></button></div>
+                                                    <div class="size-edi-usu area-12 text-center"><button><img src="images/BtnEdit.png" alt=""></button></div>
+                                                    <div class="size-exc-usu area-12 text-center"><button><img src="images/BtnDelete.png" alt=""></button></div>
+                                                </tr>
+                                            </div>
+                                            <div class="d-flex item-cla item-5">
+                                                <tr>
+                                                    <div class="size-usu-usu area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">zanata</p></div>
+                                                    <div class="size-tip-usu area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">USER</p></div>
+                                                    <div class="size-sen-usu area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">110bd18...</p></div>
+                                                    <div class="size-det-usu area-12 text-center"><button><img src="images/BtnDetalhe.png"></button></div>
+                                                    <div class="size-edi-usu area-12 text-center"><button><img src="images/BtnEdit.png" alt=""></button></div>
+                                                    <div class="size-exc-usu area-12 text-center"><button><img src="images/BtnDelete.png" alt=""></button></div>
+                                                </tr>
+                                            </div>
+                                            <div class="d-flex item-esc item-6">
+                                                <tr>
+                                                    <div class="size-usu-usu area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">rodrigo</p></div>
+                                                    <div class="size-tip-usu area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">USER</p></div>
+                                                    <div class="size-sen-usu area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">aa4d71e...</p></div>
+                                                    <div class="size-det-usu area-12 text-center"><button><img src="images/BtnDetalhe.png"></button></div>
+                                                    <div class="size-edi-usu area-12 text-center"><button><img src="images/BtnEdit.png" alt=""></button></div>
+                                                    <div class="size-exc-usu area-12 text-center"><button><img src="images/BtnDelete.png" alt=""></button></div>
+                                                </tr>
+                                            </div>
+                                            <div class="item-cla item-ver-mais" style="padding-top: 7px;">
+                                                <tr>
+                                                    <div class="size-ver-mais area-12" style="cursor: pointer;"><p class="font-padrao-bold text-fade" style="font-size: 20px;">Ver mais...</p></div>
+                                                </tr>
+                                            </div>
+                                            <div class="item-fade item-cri-pro area-12" style="padding-top: 7px; margin-left: 125px; margin-right: 125px; cursor: pointer;">
+                                                <tr>
+                                                    <div class="size-ver-mais area-12"><p class="font-padrao-bold" style="font-size: 20px; color: #2F2F2F;">Criar novo Produto</p></div>
+                                                </tr>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Usuários-->            
+                            <!--???-->            
+                            <div class="col-6">
+                                <div class="card-m shadow area-12">
+    
+                                    <div class="tabela">
+    
+                                        <div class="d-flex head item-esc" style="padding-top: 7px;">
+                                            <tr>
+                                            </tr>
+                                        </div>
+    
+                                        <div class="body">
+                                            <div class="d-flex item-cla item-1">
+                                                <tr>
+                                                </tr>
+                                            </div>
+                                            <div class="d-flex item-esc item-2">
+                                                <tr>
+                                                </tr>
+                                            </div>
+                                            <div class="d-flex item-cla item-3">
+                                                <tr>
+                                                </tr>
+                                            </div>
+                                            <div class="d-flex item-esc item-4">
+                                                <tr>
+                                                </tr>
+                                            </div>
+                                            <div class="d-flex item-cla item-5">
+                                                <tr>
+                                                </tr>
+                                            </div>
+                                            <div class="d-flex item-esc item-6">
+                                                <tr>
+                                                </tr>
+                                            </div>
+                                            <div class="item-cla item-ver-mais" style="padding-top: 7px;">
+                                                <tr>
+                                                    <div class="size-ver-mais area-12" style="cursor: pointer;"><p class="font-padrao-bold text-fade" style="font-size: 20px;">Ver mais...</p></div>
+                                                </tr>
+                                            </div>
+                                            <div class="item-fade item-cri-pro area-12" style="padding-top: 7px; margin-left: 125px; margin-right: 125px; cursor: pointer;">
+                                                <tr>
+                                                    <div class="size-ver-mais area-12"><p class="font-padrao-bold" style="font-size: 20px; color: #2F2F2F;">Criar novo Produto</p></div>
+                                                </tr>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Usuários-->            
+                        </div>
+                    </div>
+                    <!--Usuários-->
+                    <!--Histórico Pedidos-->
+                    <div class="historicopedidos" style="margin-top: 75px;">
+                        <div class="row text-center">                    
+                            <div class="col-12">
+                                <p class="text-fade font-padrao-semibold area-12" style="font-size: 25px;">Histórico de Pedidos</p>                            
+                            </div>
+                        </div>
+                        <div class="row">                    
+                            <div class="col-12">
+                                <div class="card-m shadow area-12">
+    
+                                    <div class="tabela">
+    
+                                        <div class="d-flex head item-esc" style="padding-top: 7px;">
+                                            <tr>
+                                                <div class="size-des-his area-12"><p class="font-padrao-bold text-fade" style="font-size: 20px;">Descrição</p></div>
+                                                <div class="size-cli-his area-12"><p class="font-padrao-bold text-fade" style="font-size: 20px;">Cliente</p></div>
+                                                <div class="size-tot-his area-12"><p class="font-padrao-bold text-fade" style="font-size: 20px;">Total</p></div>
+                                                <div class="size-det-his area-12 text-center"><p class="font-padrao-bold text-fade" style="font-size: 20px;">Detalhado</p></div>
+                                            </tr>
+                                        </div>
+    
+                                        <div class="body">
+                                            <div class="d-flex item-cla item-1">
+                                                <tr>
+                                                    <div class="size-des-his area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">1 Dui Burguer Berr + 1 Combo Dui Calabresa + 1 Combo Dui Burguer + 2 Coca Cola Zero + 1 Ág...</p></div>
+                                                    <div class="size-cli-his area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">Kauan Teshima</p></div>
+                                                    <div class="size-tot-his area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">R$80,90</p></div>
+                                                    <div class="size-det-his area-12 text-center"><button><img src="images/BtnDetalhe.png"></button></div>
+                                                </tr>
+                                            </div>
+                                            <div class="d-flex item-esc item-2">
+                                                <tr>
+                                                    <div class="size-des-his area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">1 Dui Burguer + 2 Combo Dui Frango + 1 Combo Dui Egg + 2 Suco de Laranja + 1 Água Mineral ...</p></div>
+                                                    <div class="size-cli-his area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">Sophia Camargo</p></div>
+                                                    <div class="size-tot-his area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">R$134,90</p></div>
+                                                    <div class="size-det-his area-12 text-center"><button><img src="images/BtnDetalhe.png"></button></div>
+                                                </tr>
+                                            </div>
+                                            <div class="d-flex item-cla item-3">
+                                                <tr>
+                                                    <div class="size-des-his area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">1 Dui Burguer Berr + 1 Combo Dui Calabresa + 1 Combo Dui Burguer + 2 Coca Cola Zero + 1 Ág...</p></div>
+                                                    <div class="size-cli-his area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">Sophia Camargo</p></div>
+                                                    <div class="size-tot-his area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">R$80,90</p></div>
+                                                    <div class="size-det-his area-12 text-center"><button><img src="images/BtnDetalhe.png"></button></div>
+                                                </tr>
+                                            </div>
+                                            <div class="d-flex item-esc item-4">
+                                                <tr>
+                                                    <div class="size-des-his area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">1 Dui Burguer + 2 Combo Dui Frango + 1 Combo Dui Egg + 2 Suco de Laranja + 1 Água Mineral ...</p></div>
+                                                    <div class="size-cli-his area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">Kauan Teshima</p></div>
+                                                    <div class="size-tot-his area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">R$134,90</p></div>
+                                                    <div class="size-det-his area-12 text-center"><button><img src="images/BtnDetalhe.png"></button></div>
+                                                </tr>
+                                            </div>
+                                            <div class="d-flex item-cla item-5">
+                                                <tr>
+                                                    <div class="size-des-his area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">1 Dui Burguer Berr + 1 Combo Dui Calabresa + 1 Combo Dui Burguer + 2 Coca Cola Zero + 1 Ág...</p></div>
+                                                    <div class="size-cli-his area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">Sophia Camargo</p></div>
+                                                    <div class="size-tot-his area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">R$80,90</p></div>
+                                                    <div class="size-det-his area-12 text-center"><button><img src="images/BtnDetalhe.png"></button></div>
+                                                </tr>
+                                            </div>
+                                            <div class="d-flex item-esc item-6">
+                                                <tr>
+                                                    <div class="size-des-his area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">1 Dui Burguer + 2 Combo Dui Frango + 1 Combo Dui Egg + 2 Suco de Laranja + 1 Água Mineral ...</p></div>
+                                                    <div class="size-cli-his area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">Kauan Teshima</p></div>
+                                                    <div class="size-tot-his area-12"><p class="font-padrao-regular text-white" style="font-size: 20px; margin-top: 7px;">R$134,90</p></div>
+                                                    <div class="size-det-his area-12 text-center"><button><img src="images/BtnDetalhe.png"></button></div>
+                                                </tr>
+                                            </div>
+                                            <div class="item-cla item-ver-mais" style="padding-top: 7px;">
+                                                <tr>
+                                                    <div class="size-ver-mais area-12" style="cursor: pointer;"><p class="font-padrao-bold text-fade" style="font-size: 20px;">Ver mais...</p></div>
+                                                </tr>
+                                            </div>
+                                            <div class="item-fade item-cri-pro area-12" style="padding-top: 7px; margin-left: 500px; margin-right: 500px; cursor: pointer;">
+                                                <tr>
+                                                    <div class="size-ver-mais area-12"><p class="font-padrao-bold" style="font-size: 20px; color: #2F2F2F;">Criar novo Produto</p></div>
+                                                </tr>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Hisórico Pedidos-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" ></script>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
