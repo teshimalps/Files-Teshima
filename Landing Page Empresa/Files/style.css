@@ -1,0 +1,174 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'font-padrao-regular';
+    src: url(Fonts/JosefinSans-Regular.ttf);
+}
+@font-face {
+    font-family: 'font-padrao-semibold';
+    src: url(Fonts/JosefinSans-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'font-padrao-bold';
+    src: url(Fonts/JosefinSans-Bold.ttf);
+}
+.font-padrao-regular{
+    font-family: "font-padrao-regular";
+}
+.font-padrao-semibold{
+    font-family: "font-padrao-semibold";
+}
+.font-padrao-bold{
+    font-family: "font-padrao-bold";
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.area-1, .area-2, .area-3, .area-4, .area-5, .area-6, .area-7, .area-8, .area-9, .area-10, .area-11, .area-12, .area-13, .area-14, .area-15, .area-16, .area-17, .area-18, .area-19, .area-20, .area-21, .area-22, .area-23, .area-24, .area-25, .area-26, .area-27{
+    visibility: hidden;
+}
+.head-1{
+    height: 80vh;
+    background: rgb(9,56,84);
+    background: linear-gradient(45deg, rgba(9,56,84,1) 0%, rgba(12,83,125,1) 100%);
+    padding-left: 150px;
+    padding-top: 150px;
+}
+.head-1-mob{
+    height: 90vh;
+    background: rgb(9,56,84);
+    background: linear-gradient(45deg, rgba(9,56,84,1) 0%, rgba(12,83,125,1) 100%);
+    padding-left: 25px;
+    padding-top: 75px;
+    padding-right: 25px;
+}
+.head-2{
+    height: 20vh;
+    background: rgb(10,48,71);
+    background: linear-gradient(45deg, rgba(10,48,71,1) 0%, rgba(9,56,84,1) 100%);
+    padding-left: 150px;
+    padding-top: 95px;
+}
+.head-2-mob{
+    height: 10vh;
+    background: rgb(10,48,71);
+    background: linear-gradient(45deg, rgba(10,48,71,1) 0%, rgba(9,56,84,1) 100%);
+    padding-left: 25px;
+    padding-top: 35px;
+}
+.text-yellow{
+    color: #ffc107;
+}
+.btn-custon{
+    background-color: #ffc107;
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.cont{
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 40px;
+}
+.cont-mob{
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 40px;
+}
+.card-perso{
+    background-color: #fff;
+    height: 500px;
+    width: 350px;
+    border-radius: 30px;
+    padding: 30px;
+}
+.card-perso-mob{
+    background-color: #fff;
+    height: 225px;
+    width: 359px;
+    border-radius: 30px;
+    padding: 30px;
+}
+.cards{
+    display: flex;
+}
+.input-perso{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #1B4662;
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 25px;
+    font-family: "font-padrao-regular";
+    font-size: 20px;
+}
+.input-perso-mob{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #1B4662;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    font-family: "font-padrao-regular";
+    font-size: 20px;
+}
+.btn-perso{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #ffc107;
+    border-radius: 25px;
+    border: 0px solid transparent;
+    color: #093854;
+    font-size: 20px;
+    font-family: "font-padrao-semibold";
+}
+.btn-perso-mob{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #ffc107;
+    border-radius: 25px;
+    border: 0px solid transparent;
+    color: #093854;
+    font-size: 30px;
+    font-family: "font-padrao-semibold";
+}
+.btn-custon-mob{
+    background-color: #ffc107;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.cp{
+    min-width: 291px;
+    max-height: 349px;
+}
+.dec-none{
+    text-decoration: none;
+}
+.text-blue{
+    color: #093854;
+}
+.text-sub-blue{
+    color: #1C74A8;
+}
+.contall{
+    background-color: #f1f1f1;
+}
+.bg-sobre{
+    background: rgb(10,48,71);
+    background: linear-gradient(45deg, rgba(10,48,71,1) 0%, rgba(9,56,84,1) 100%);
+}
