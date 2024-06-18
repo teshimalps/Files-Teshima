@@ -1,0 +1,30 @@
+CREATE TABLE tbprodutos(
+	PROD_ID int PRIMARY KEY AUTO_INCREMENT,
+	CAT_ID int,
+	PROD_NOM varchar(30),
+	PROD_SUB_NOM varchar(30),
+	PROD_DESC varchar(100),
+	PROD_VAL varchar(12),
+	PROD_IMG blob);
+
+
+CREATE TABLE tbcategorias(
+	CAT_ID int PRIMARY KEY AUTO_INCREMENT,
+	CAT_NOM varchar(30));
+
+
+CREATE TABLE tbusuarios(
+	USER_ID int PRIMARY KEY AUTO_INCREMENT,
+	USER_TIP varchar(6),
+	USER_NOM varchar(30),
+	USER_EMAIL varchar(50),
+	USER_PAS varchar(100));
+
+CREATE TABLE tbvendas(
+	VEN_ID int PRIMARY KEY AUTO_INCREMENT,
+	USER_ID int,
+	PROD_ID int,
+	CAT_ID int,
+	VEN_NOM_CLI varchar(30),
+	VEN_DATA date,
+	VEN_QTDE varchar(10));
